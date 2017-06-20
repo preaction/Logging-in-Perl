@@ -4,9 +4,11 @@
     <head>
         <meta charset="utf-8">
 
-        <title>TALK NAME</title>
+        <title>Logging in Perl</title>
 
-        <meta name="description" content="TALK DESCRIPTION">
+        <meta name="description" content="How to log in your Perl
+        programs, from tiny print statements, to full-fledged logging
+        systems">
         <meta name="author" content="Doug Bell">
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +35,25 @@
         <!--[if lt IE 9]>
         <script src="reveal.js/lib/js/html5shiv.js"></script>
         <![endif]-->
+
+        <!-- Custom style rules -->
+        <style>
+            .flex-row {
+                display: flex;
+                flex: 1 1;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .flex-row pre {
+                width: auto;
+            }
+            .reveal pre.larger {
+                font-size: 0.75em;
+            }
+            .reveal pre.largest {
+                font-size: 0.95em;
+            }
+        </style>
     </head>
 
     <body>
@@ -42,15 +63,10 @@
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
 
-                <section data-markdown="slides.md" data-separator="^------\n" data-separator-vertical="^---\n"></section>
+                <section data-markdown="slides.md" data-separator="^------\n" data-separator-vertical="^---\n" data-separator-notes="^Note:"></section>
 
             </div>
 
-            <div style="position: absolute; left: 0.2em; bottom: 0.2em; z-index: 1000; max-width: 10%">
-                <a href="http://chicago.pm.org">
-                    <img src="http://chicago.pm.org/theme/images/chicagopm-small.png" />
-                </a>
-            </div>
         </div>
 
         <script src="reveal.js/lib/js/head.min.js"></script>
@@ -61,8 +77,8 @@
             // Full list of configuration options available at:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
-                controls: true,
-                progress: true,
+                controls: false,
+                progress: false,
                 history: true,
                 center: true,
 
